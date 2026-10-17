@@ -142,10 +142,10 @@ def buildModel(data, chargerCount=2, chargeVehicleCount=None, swapVehicleCount=N
             # 弧的预剪枝二：电量不可行
             if length * data["consumptionRate"] > batteryCapacity + 1e-9:
                 continue
-            # 弧的预剪枝二：容量不可行
+            # 弧的预剪枝三：容量不可行
             if i in customerSet and j in customerSet:
                 if data["demand"][i] + data["demand"][j] > loadCapacity + 1e-9:
-                    continue  # 两个客户的总需求超过车辆容量。
+                    continue
             distance[i, j] = length
 
     arcs = list(distance)

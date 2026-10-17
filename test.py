@@ -15,7 +15,7 @@ copyCount = 2                # 每个物理电站的复制数，表示可以被�
 chargerCount = 2             # 每个电站的充电桩数量
 chargeVehicleCount = 10      # C-type 车辆数（上限），None 表示不限制
 swapVehicleCount = 10        # S-type 车辆数（上限），None 表示不限制
-timeLimit = 30
+timeLimit = 3600
 
 
 @pytest.mark.parametrize("instancePath", instancePaths, ids=[path.stem for path in instancePaths])
